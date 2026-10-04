@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Textbook Buddy - Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header><span class="mascot"></span><h1>textbook buddy</h1><div class="dots">· · · ✿ · · ·</div><div class="tagline">warm books, happy classes</div></header>
+<nav>
+ <a href="index.html">📋 Check books</a>
+ <a href="register.html" class="on">🧾 Register</a>
+ <a href="setup.html">⚙️ Setup classes</a>
+</nav>
+
+<section id="reg">
+ <div class="card">
+  <div class="noprint"><label style="margin-top:0">Class</label><select id="regC"></select>
+  <div class="acts"><button class="btn mint sm" id="rPrint">🖨️ Print</button><button class="btn lav sm" id="rCsv">⬇️ Excel file (with signatures)</button></div></div>
+  <p class="hint noprint" style="margin:0 0 12px">🟢 Live: updates by itself whenever a teacher saves.</p>
+  <div id="regBox"></div>
+ </div>
+</section>
+</div>
+<div class="msg" id="msg"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

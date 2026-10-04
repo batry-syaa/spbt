@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Textbook Buddy - Check books</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header><span class="mascot"></span><h1>textbook buddy</h1><div class="dots">· · · ✿ · · ·</div><div class="tagline">warm books, happy classes</div></header>
+<nav>
+ <a href="index.html" class="on">📋 Check books</a>
+ <a href="register.html">🧾 Register</a>
+ <a href="setup.html">⚙️ Setup classes</a>
+</nav>
+
+<section id="check">
+ <div class="card" id="pick"></div>
+ <div id="form">
+  <div class="card">
+   <div class="top"><h2 id="fTitle"></h2><div class="acts" style="margin:0"><button class="btn lav sm" id="fRefresh">↻ Refresh</button><button class="btn lav sm" id="fBack">← Change class</button></div></div>
+   <label style="margin-top:0">Your name (teacher)</label><input id="fWho" placeholder="e.g. Cikgu Aminah" autocomplete="off">
+   <div class="mode" id="mode"><button data-p="r">📥 Receive</button><button data-p="t">📤 Return</button></div>
+   <div class="acts" style="margin:0"><button class="btn mint sm" id="allOk">✓ Mark unmarked books present</button></div>
+   <div class="legend">✓ present · ✗ missing · 🩹 damaged (tap again to clear). Open a student to tick books, then sign. Everything saves automatically.</div>
+   <div id="stu"></div>
+  </div>
+ </div>
+</section>
+</div>
+<div id="modal" hidden><div class="card">
+ <h2 id="mName"></h2><p class="hint" style="margin:0 0 10px">Sign with your finger or mouse</p>
+ <canvas id="sig"></canvas>
+ <div class="acts"><button class="btn lav sm" id="mClr">Clear</button><button class="btn gray sm" id="mCancel">Cancel</button><button class="btn mint sm" id="mSave" style="margin-left:auto">Save signature ✓</button></div>
+</div></div>
+<div class="msg" id="msg"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
